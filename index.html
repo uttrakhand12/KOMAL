@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaTcH's In</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: italic;
+        background-color: rgb(186, 180, 180);
+      }
+      .navbar {
+        background-color: rgb(4, 117, 238);
+        border-radius: 80px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 50px;
+        width: 100%;
+      }
+      .navbar img {
+        height: 50px;
+        width: 50px;
+        margin: 1px 40px;
+        padding: 0;
+      }
+      .navbar ul {
+        overflow: auto;
+      }
+      .navbar li {
+        float: left;
+        list-style: none;
+        margin: 10px 15px;
+      }
+      .navbar li a:hover {
+        color: rgb(0, 0, 0);
+        background-color: rgb(180, 180, 173);
+      }
+      .navbar li a {
+        text-decoration: none;
+        color: black;
+        padding: 3px 3px;
+      }
+      .search {
+        align-items: flex-end;
+        align-content: flex-end;
+        color: black;
+        margin-left: 600px;
+      }
+      .search input,
+      button {
+        border: 4px solid black;
+        padding: 3px 3px;
+        margin: 4px;
+        border-radius: 15px;
+      }
+      button {
+        cursor: pointer;
+      }
+      input:hover {
+        background-color: gray;
+        color: black;
+      }
+      button:hover {
+        background-color: gray;
+      }
+      .box {
+        border: 4px solid black;
+        border-radius: 80px;
+        margin: 25px 100px;
+        color: black;
+        background-color: rgb(202, 175, 175);
+      }
+      .watch {
+        border: 2px solid red;
+        border-radius: 10px;
+        box-shadow: 10px 20px 3px red;
+        margin: 15px 25px;
+        padding: 24px 24px;
+        text-shadow:  4px 4px 4px rgb(0, 0, 0);
+      }
+      h1 {
+        margin: 4px auto;
+        width: 345px;
+        padding-top: 10px;
+      }
+      p,
+      h2 {
+        text-align: justify;
+      }
+      #apple {
+        float: left;
+        width: 40%;
+        background-color: aqua;
+      }
+      #rolex {
+        float: right;
+        width: 40%;
+        background-color: aqua;
+      }
+      #titan {
+        float: left;
+        width: 40%;
+        background-color: aqua;
+      }
+      #piraso {
+        float: right;
+        width: 40%;
+        background-color: aqua;
+      }
+      button a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+      .container {
+        width: 100%;
+        margin: 50px auto;
+        height: 200px;
+        background-color: black;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .img img {
+        height: 180px;
+        width: 180px;
+        float: left;
+        margin-right: 980px;
+        position: relative;
+        animation-name: bhatt;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes bhatt {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+
+        100% {
+          top: 0px;
+          left: 250px;
+        }
+      }
+      .top {
+        margin: auto;
+        border: 2px solid red;
+        border-radius: 50px;
+        background-color: brown;
+        width: 1000px;
+      }
+      .top h1 {
+        align-items: center;
+        justify-content: center;
+        margin-left: 400px;
+      }
+      .top img {
+        width: 50px;
+        display: block;
+        margin: auto;
+      }
+      .cont {
+        margin: auto;
+        width: 1000px;
+      }
+      .boxy {
+        border: 4px solid black;
+        background-color: rgb(255, 222, 57);
+        margin: 2px;
+        padding: 25px;
+        display: inline-block;
+        width: 32%;
+        box-sizing: border-box;
+        border-radius: 50px;
+      }
+      .boxy h2 {
+        text-align: center;
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin: 0%;
+      }
+      .country {
+        /* text-decoration: none;
+        list-style: none; */
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 2rem;
+      }
+      .country h1 {
+        width: 100%;
+        margin: 4px auto;
+      }
+      .con {
+        background-color: aqua;
+        padding: 14px 25px;
+        border: 4px solid red;
+        text-align: center;
+        text-decoration: none;
+        list-style: none;
+      }
+      #box1 textarea {
+        border: 2px solid black;
+        color: black;
+        background-color: rgb(241, 149, 149);
+        height: 100px;
+        width: 150px;
+        position: fixed;
+        float: right;
+        margin-left: 680px;
+        top: 150px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .haha {
+        border: 3px solid rgb(255, 0, 0);
+        background-color: rgb(132, 103, 216);
+        padding: 35px;
+        margin: 34px auto;
+        width: 666px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        color: rgb(20, 215, 20);
+        background-color: rgb(235, 255, 13);
+      }
+      a:visited {
+        background-color: chartreuse;
+      }
+      a:active {
+        background-color: darkblue;
+      }
+      .btn {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+        background-color: rgb(255, 174, 0);
+        padding: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        border-radius: 4px;
+      }
+      .btn:hover {
+        color: blueviolet;
+        background-color: red;
+        border: 2px solid green;
+      }
+      #cont1 h1 {
+        text-align: center;
+        justify-content: center;
+      }
+      section {
+        height: 344px;
+        margin: 3px 205px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid red; */
+        justify-content: center;
+        color: blue;
+        text-shadow: 4px 3px 4px red;
+      }
+      #box3 {
+        justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            transition: background-color 1s ease-in-out .3s;
+            transition: all 1s ease-in-out .3s;
+      }
+      #box3:hover{
+            background-color: rgb(174, 208, 5);
+            height: 300px;
+            width: 1500px;
+            border-radius: 100px;
+            font-size: 30px;
+            
+        }
+      #box3 img {
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="./logo.jpeg" alt="hihi" />
+      <ul>
+        <li><a href="$">HOME</a></li>
+        <li><a href="$"> ABOUT</a></li>
+        <li><a href="$"> SERVISES</a></li>
+        <li><a href="$">CONTACT US</a></li>
+      </ul>
+      <div class="search">
+        <input type="text" name="search" placeholder="SEARCH THE WEBSITE" />
+      </div>
+      <button>SEARCH</button>
+    </nav>
+    <div id="box1">
+      <textarea name="text" id="text" cols="30" rows="10">
+ hehhhhhh you komal
+ i really love u  </textarea
+      >
+    </div>
+    <div class="box">
+      <h1>ItS OuR WATCH StOrE</h1>
+      <div id="apple" class="watch">
+        <h2>AaPpLe StOrE</h2>
+        <q
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+          at, totam quasi veniam libero unde sunt, minus id quaerat corporis
+          vitae hic, sit et necessitatibus?</q
+        >
+        <button><a href="https//www.apple.com">INTER to ORDER </a></button>
+      </div>
+      <div id="rolex" class="watch">
+        <h2>RoLeX StOrE</h2>
+        <q
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+          at, totam quasi veniam libero unde sunt, minus id quaerat corporis
+          vitae hic, sit et necessitatibus?</q
+        >
+        <button><a href="https//www.rolex.com">INTER to ORDER </a></button>
+      </div>
+      <div id="titan" class="watch">
+        <h2>TiTaN StOrE</h2>
+        <q
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+          at, totam quasi veniam libero unde sunt, minus id quaerat corporis
+          vitae hic, sit et necessitatibus?</q
+        >
+        <button><a href="https//www.titan.com">INTER to ORDER </a></button>
+      </div>
+      <div id="piraso" class="watch">
+        <h2>PiRaSo StOrE</h2>
+        <q
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+          at, totam quasi veniam libero unde sunt, minus id quaerat corporis
+          vitae hic, sit et necessitatibus?</q
+        >
+        <button><a href="https//www.piraso.com">INTER to ORDER </a></button>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+
+    <div class="container">
+      <div class="img">
+        <img src="./body.jpg" alt="" />
+      </div>
+      <marquee behavior="shorthand" direction="left">
+        ROLLAA JAMANA HAI, LONDO ME ROLLAA
+      </marquee>
+    </div>
+    <div class="top">
+      <img src="./logo.jpeg" alt="" />
+      <h1>WaTcH ThErE</h1>
+    </div>
+    <div class="cont">
+      <div class="boxy">
+        <h2>PlAsTiC</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum incidunt
+          accusamus nobis animi omnis voluptatibus eveniet facere dolorum
+          laborum vitae deserunt rerum dolor eos explicabo, rem laboriosam
+          ratione dicta et. Repellat eveniet est soluta tempore pariatur
+          praesentium officia commodi laboriosam quasi tempora? Fugiat esse illo
+          exercitationem amet quas ipsum. Soluta!
+        </p>
+        <button><a href="https//www.plastic.come"></a></button>
+      </div>
+      <div class="boxy">
+        <h2>GoLd</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum incidunt
+          accusamus nobis animi omnis voluptatibus eveniet facere dolorum
+          laborum vitae deserunt rerum dolor eos explicabo, rem laboriosam
+          ratione dicta et. Repellat eveniet est soluta tempore pariatur
+          praesentium officia commodi laboriosam quasi tempora? Fugiat esse illo
+          exercitationem amet quas ipsum. Soluta!
+        </p>
+        <button><a href="https//www.gold.come"></a></button>
+      </div>
+      <div class="boxy">
+        <h2>PlAtInUm</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum incidunt
+          accusamus nobis animi omnis voluptatibus eveniet facere dolorum
+          laborum vitae deserunt rerum dolor eos explicabo, rem laboriosam
+          ratione dicta et. Repellat eveniet est soluta tempore pariatur
+          praesentium officia commodi laboriosam quasi tempora? Fugiat esse illo
+          exercitationem amet quas ipsum. Soluta!
+        </p>
+        <button><a href="https//www.platinum.come"></a></button>
+      </div>
+    </div>
+    <div class="country">
+      <h1>CoUnTrY's TiMe WiLl Be FoUnD HeRe</h1>
+      <div class="con"><a href="$">InDiA</a></div>
+      <div class="con"><a href="$">GeRmAnY</a></div>
+      <div class="con"><a href="$">SwItZeRlanD</a></div>
+      <div class="con"><a href="$">AuStraLiA</a></div>
+      <div class="con"><a href="$">JaPaN</a></div>
+      <div class="con"><a href="$">ChInA</a></div>
+      <div class="con"><a href="$">NePaL</a></div>
+      <div class="con"><a href="$">ItAlY</a></div>
+      <div class="con"><a href="$">BrAzIl</a></div>
+      <div class="con"><a href="$">SpAiN</a></div>
+      <div class="con"><a href="$">NoRwAy</a></div>
+    </div>
+
+    <div class="haha" id="cont1">
+      <h1>More About Our StOrE</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sed
+        alias eius, fugiat ab dolorum eos odit possimus voluptatibus optio
+        reiciendis. Saepe, ut? Sequi eum aperiam eos vero corporis laborum vel
+        cum quidem magnam commodi!
+      </p>
+      <a href="https://google.com" class="btn">Read more</a>
+      <button class="btn">Contect us</button>
+    </div>
+    <hr />
+    <section>
+      <h1>WeLlCoMe To WaTcH WoRd</h1>
+      <p>
+        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Quos, impedit! Cum ipsam pariatur sapiente neque
+        doloribus quae, quidem vel doloremque praesentium quas minus deleniti
+        corrupti, nihil libero ea ut? Atque ea, natus vitae aut, vero numquam
+        possimus dolor labore accusamus aspernatur dolore. Dolor laborum
+        eligendi commodi eaque nihil, in maiores! consectetur adipisicing elit.
+        Fugiat rem, quidem esse aut est dignissimos possimus autem voluptas
+        molestias quod reiciendis voluptatibus iste quia odit veniam iusto!
+        Facilis, fugiat dolor.
+      </p>
+    </section>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+
+    <div class="cont3">
+      <div id="box3">
+        <h2>WaTcH StOrE</h2>
+        <img src="./body.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
